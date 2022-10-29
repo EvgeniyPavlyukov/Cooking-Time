@@ -27,7 +27,6 @@ class Recipies: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("mafaka")
         
         view.backgroundColor = UIColor.white
         self.title = "All Recipies"
