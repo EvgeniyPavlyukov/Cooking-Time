@@ -15,6 +15,7 @@ class Recipies: UIViewController {
     var label: UILabel!
     var tableViewRecipies: UITableView!
     let identifierForTableView = "MyCell"
+    let array = ["1","2","3","4","5","6","7","8","9"]
     
     weak var collectionView: UICollectionView!
     
@@ -158,16 +159,19 @@ extension Recipies: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          return 20
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifierForTableView, for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = "Section \(indexPath.section), cell \(indexPath.row)"
+        let number = array[indexPath.row]
+        content.text = number   // "Section \(indexPath.section), cell \(indexPath.row)" // сюда нельзя передать массив
+        
 //        content.image = "....."
         cell.contentConfiguration = content
+        cell.accessoryType = .detailButton
         
         return cell
     }
