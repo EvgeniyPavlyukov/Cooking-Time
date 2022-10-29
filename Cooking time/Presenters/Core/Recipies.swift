@@ -13,6 +13,8 @@ class Recipies: UIViewController {
    
     var imageView: UIImageView!
     var label: UILabel!
+    var tableViewRecipies: UITableView!
+    let identifierForTableView = "MyCell"
     
     weak var collectionView: UICollectionView!
     
@@ -30,9 +32,11 @@ class Recipies: UIViewController {
         
         view.backgroundColor = UIColor.white
         self.title = "All Recipies"
-        segmentedControl()
+        
         navigationSearch()
         createLeftBarButtonItem()
+        createTableView()
+        segmentedControl()
     }
     
     //MARK: - Segmented Controll Vegetian
@@ -109,6 +113,21 @@ class Recipies: UIViewController {
         
        }
     
+    //MARK: - Table View Recipies
+    
+    func createTableView() {
+        
+        self.tableViewRecipies = UITableView(frame: view.bounds, style: .plain)
+        tableViewRecipies.register(UITableViewCell.self, forCellReuseIdentifier: identifierForTableView)
+        
+        view.addSubview(tableViewRecipies)
+        
+        self.tableViewRecipies.delegate = self
+        self.tableViewRecipies.dataSource = self
+        
+        tableViewRecipies.autoresizingMask = [.flexibleWidth, .flexibleHeight] // this resize our tableVIEW
+    }
+    
     
 }
 
@@ -123,3 +142,35 @@ extension Recipies: UITextFieldDelegate {
     
 }
 
+//MARK: - Table View Recipies Delegat
+
+extension Recipies: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+}
+
+//MARK: - UITableViewDataSource
+
+extension Recipies: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+          return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifierForTableView, for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = "Section \(indexPath.section), cell \(indexPath.row)"
+//        content.image = "....."
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+    
+    
+}
