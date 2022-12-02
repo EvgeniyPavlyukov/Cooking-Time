@@ -6,6 +6,10 @@ target 'Cooking time' do
   use_frameworks!
 
 pod 'SnapKit'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'FirebaseAuth'
+pod 'FirebaseFirestore'
   # Pods for Cooking time
 
 end
