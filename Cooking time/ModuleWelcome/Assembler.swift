@@ -21,7 +21,8 @@ class LoginAssembler {
         let firebaseRegister = FirebaseRegisterClass()
         
         
-        view.output = presenter
+        view.outputData = presenter
+        view.outputAction = presenter
         presenter.view = view 
         presenter.interactor = interactor
         presenter.router = router

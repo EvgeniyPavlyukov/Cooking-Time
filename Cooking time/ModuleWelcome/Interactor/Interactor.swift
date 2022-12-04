@@ -8,17 +8,39 @@
 import Foundation
 
 class Interactor: InteractorInputProtocol {
-  
+    
     var output: InteractorOutputProtocol! //это слабая ссылка на презентер так как презентер держит сильную на интерактор
     
-    func didObtainForSignUp(login: String, password: String) {
-        let name = login
-        let pas = password
-        output.signUpWith(login: name, password: pas)
+    func didObtainForSignUp(login: String?, password: String?, confirmationPassword: String?) {
+        guard let loginChecked = login, !loginChecked.isEmpty else {
+            print("Missing Email field data")
+            return
+        }
+        
+        guard let passwordChecked = password, !passwordChecked.isEmpty else {
+            print("Missing password field data")
+            return
+        }
+        
+        guard let confirmationPasswordChecked = confirmationPassword, !confirmationPasswordChecked.isEmpty else {
+            print("Missing confirmation password field data")
+            return
+        }
+        
+        output.signUpWith(login: loginChecked, password: passwordChecked)
     }
     
-    func didObtainForSignIn(login: String, password: String) {
-        output.logInWith(login: login, password: password)
+    func didObtainForSignIn(login: String?, password: String?) {
+        guard let loginChecked = login, !loginChecked.isEmpty else {
+            print("Missing Email field data")
+            return
+        }
+        
+        guard let passwordChecked = password, !passwordChecked.isEmpty else {
+            print("Missing password field data")
+            return
+        }
+        
+        output.logInWith(login: loginChecked, password: passwordChecked)
     }
-
 }

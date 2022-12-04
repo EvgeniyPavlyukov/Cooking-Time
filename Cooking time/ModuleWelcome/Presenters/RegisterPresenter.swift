@@ -10,16 +10,16 @@ import UIKit
 
 
 class RegisterPresenter: RegisterViewOutputProtocol, InteractorOutputProtocol, ViewOutputProtocol {
-
+    
+ 
     weak var view: RegisterViewInputProtocol!
     var interactor: InteractorInputProtocol!
     var router: RegisterRouterInputProtocol!
     
     //MARK: - ViewOutputProtocol
     
-    func obtain(login: String, password: String) {
-        interactor.didObtainForSignIn(login: login, password: password)
-        interactor.didObtainForSignUp(login: login, password: password)
+    func obtain(login: String?, password: String?, passwordConfirmation: String?) {
+        interactor.didObtainForSignUp(login: login, password: password, confirmationPassword: passwordConfirmation)
     }
     
     //MARK: - InteractorOutputProtocol
@@ -29,6 +29,10 @@ class RegisterPresenter: RegisterViewOutputProtocol, InteractorOutputProtocol, V
     }
     
     func logInWith(login: String, password: String) {
-        
+        // no need
+    }
+    
+    func presentSignUpPage() {
+        // no need
     }
 }

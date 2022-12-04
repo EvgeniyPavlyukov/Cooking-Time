@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import UIKit
 
 protocol ViewOutputProtocol: AnyObject { // то что приходит на вью
-    func obtain(login : String, password : String)
+    func obtain(login : String?, password : String?, passwordConfirmation : String?)
 }

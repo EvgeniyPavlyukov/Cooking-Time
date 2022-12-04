@@ -8,6 +8,7 @@
 import Foundation
 
 protocol LoginRouterInputProtocol: AnyObject {
-    func showRecipiesModule(login: String, password: String)
+    func checkForLogin(login: String, password: String)
     func showSignUpPage()
+    func showRecepiesPageAfterAuth()
 }

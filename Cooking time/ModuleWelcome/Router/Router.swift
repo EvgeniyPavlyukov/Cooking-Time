@@ -10,7 +10,8 @@ import UIKit //чтобы показать алерт через роутер
 
 
 class Router: LoginRouterInputProtocol, RegisterRouterInputProtocol, ViewInputProtocol {
-   
+
+  
     weak var view: UIViewController!
     weak var interactor: Interactor!
     var registerOutput: RegisterViewOutputProtocol!
@@ -40,13 +41,15 @@ class Router: LoginRouterInputProtocol, RegisterRouterInputProtocol, ViewInputPr
         view?.present(signUPVC!, animated: true)
     }
     
-    func showRecipiesModule(login: String, password: String) {
-        
+    func checkForLogin(login: String, password: String) {
+        firebaseSignIn.logInUser(login: login, password: password)
     }
     
-    func showSignInAccountAlert(login: String, password: String) {
-        
+    func showRecepiesPageAfterAuth() {
+//        let recepiesModuleAssembler =
+//        view.present(recepiesModuleAssembler, animated: true, completion: nil)
     }
+    
     
     //MARK: - RegisterRouterInputProtocol
     func popBackToLogin() {

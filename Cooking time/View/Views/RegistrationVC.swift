@@ -78,29 +78,17 @@ class RegistrationVC: UIViewController, RegisterViewInputProtocol {
         registerButton.translatesAutoresizingMaskIntoConstraints = false
         registerButton.setTitle("Register", for: .normal)
         registerButton.setTitleColor(.white, for: .normal)
-        registerButton.addTarget(self, action: #selector(registerNewAccount), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(registerNewAccountTapped), for: .touchUpInside)
         view.addSubview(registerButton)
     }
     
     //MARK: - ViewOutput
     
-    @objc func registerNewAccount() { //this should be in interactor
-        
-        if textFieldPassword.text == textFieldPasswordConfirmation.text {
-            guard let login = textFieldEmail.text, !login.isEmpty else {
-                print("Missing Email field data")
-                return
-            }
-            
-            guard let password = textFieldPassword.text, !password.isEmpty else {
-                print("Missing password field data")
-                return
-            }
-            
-            outputData.obtain(login: login, password: password)
-        } else {
-            print("your passwords doesn't match")
-        }
+    @objc func registerNewAccountTapped() {
+        var textLogin: String? = textFieldEmail.text
+        var textPassword: String? = textFieldPassword.text
+        var textConfirmationPassword: String? = textFieldPasswordConfirmation.text
+        outputData.obtain(login: textLogin, password: textPassword, passwordConfirmation: textConfirmationPassword)
     }
         
    

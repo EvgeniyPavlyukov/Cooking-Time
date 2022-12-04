@@ -16,7 +16,8 @@ class LoginVC: UIViewController, LoginViewInputProtocol {
     fileprivate var loginButton: UIButton!
     fileprivate var registerButton: UIButton!
     
-    var output: LoginViewOutputProtocol!
+    var outputData: ViewOutputProtocol!
+    var outputAction: LoginViewOutputProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,15 +87,15 @@ class LoginVC: UIViewController, LoginViewInputProtocol {
 //MARK: - Login Push VC
     
     @objc func loginPush() {
-//        let recepiesTabBar = TabBarMainVC()
-//        present(recepiesTabBar, animated: true)
-        
+        var textLogin: String? = textFieldEmail.text
+        var textPassword: String? = textFieldPassword.text
+        outputData.obtain(login: textLogin, password: textPassword, passwordConfirmation: nil)
     }
     
 //MARK: - Register Push VC
     
     @objc func registerPush() {
-        output.showSignUpPage()
+        outputAction.showSignUpPage()
     }
 
     //MARK: - Constraints SnapKit
