@@ -38,6 +38,7 @@
 		3BC4D5AA2934DBCD009494FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BC4D5A92934DBCD009494FA /* GoogleService-Info.plist */; };
 		3BC4D5AF293666D4009494FA /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4D5AE293666D4009494FA /* RegisterPresenter.swift */; };
 		3BC4D5B52936900E009494FA /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4D5B42936900E009494FA /* FirebaseAuth.swift */; };
+		3BCF9F25293CE717004AE918 /* RecepiesTabBarVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF9F24293CE717004AE918 /* RecepiesTabBarVCViewController.swift */; };
 		3BDEB591291160A80003C9F4 /* RecipiesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEB590291160A80003C9F4 /* RecipiesManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		3BC4D5A92934DBCD009494FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BC4D5AE293666D4009494FA /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		3BC4D5B42936900E009494FA /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		3BCF9F24293CE717004AE918 /* RecepiesTabBarVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesTabBarVCViewController.swift; sourceTree = "<group>"; };
 		3BDEB590291160A80003C9F4 /* RecipiesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesManager.swift; sourceTree = "<group>"; };
 		EDA0D0A7C5955478CA2D5215 /* Pods_Cooking_time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cooking_time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9081773D94C41A897B78E4 /* Pods-Cooking time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking time.debug.xcconfig"; path = "Target Support Files/Pods-Cooking time/Pods-Cooking time.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				3B8E39FE29390DFF002269E0 /* Resourses */,
 				3B86CBD529080C3D0077314F /* Lounch Screen */,
 				3BAF5C60292B681E00B51DBE /* ModuleWelcome */,
+				3BCF9F1C293CE62F004AE918 /* ModuleRecepies */,
 			);
 			path = "Cooking time";
 			sourceTree = "<group>";
@@ -277,6 +280,70 @@
 				3B8E3A22293927E4002269E0 /* Protocols */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		3BCF9F1C293CE62F004AE918 /* ModuleRecepies */ = {
+			isa = PBXGroup;
+			children = (
+				3BCF9F1D293CE644004AE918 /* View */,
+				3BCF9F1E293CE646004AE918 /* Interactor */,
+				3BCF9F1F293CE647004AE918 /* Presenter */,
+				3BCF9F20293CE649004AE918 /* Entity */,
+				3BCF9F21293CE64A004AE918 /* Router */,
+			);
+			path = ModuleRecepies;
+			sourceTree = "<group>";
+		};
+		3BCF9F1D293CE644004AE918 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BCF9F23293CE69B004AE918 /* Protocols */,
+				3BCF9F22293CE693004AE918 /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BCF9F1E293CE646004AE918 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3BCF9F1F293CE647004AE918 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3BCF9F20293CE649004AE918 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3BCF9F21293CE64A004AE918 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3BCF9F22293CE693004AE918 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BCF9F24293CE717004AE918 /* RecepiesTabBarVCViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BCF9F23293CE69B004AE918 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCF9F25293CE717004AE918 /* RecepiesTabBarVCViewController.swift in Sources */,
 				3B8E3A2529392848002269E0 /* ViewInputs.swift in Sources */,
 				3B8E3A2929392B3E002269E0 /* LoginViewInput.swift in Sources */,
 				3B8E3A0E293912A8002269E0 /* Router.swift in Sources */,

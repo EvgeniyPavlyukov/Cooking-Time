@@ -7,5 +7,5 @@
 
 import Foundation
 
-protocol RegisterViewInputProtocol: AnyObject {  //то что выходит из вью
+protocol RegisterViewInputProtocol: AnyObject {  //то что приходит во вью RegisterVC обновление UI
 }

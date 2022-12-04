@@ -7,5 +7,5 @@
 
 import Foundation
 
-protocol ViewInputProtocol: AnyObject { // то что приходит на вью
+protocol ViewInputProtocol: AnyObject { // то что приходит на любой вью в виде даты
 }

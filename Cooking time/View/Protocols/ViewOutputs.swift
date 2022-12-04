@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ViewOutputProtocol: AnyObject { // то что приходит на вью
+protocol ViewOutputProtocol: AnyObject { // любая дата выходящая с обоих VC
     func obtain(login : String?, password : String?, passwordConfirmation : String?)
 }

@@ -95,7 +95,7 @@ class LoginVC: UIViewController, LoginViewInputProtocol {
 //MARK: - Register Push VC
     
     @objc func registerPush() {
-        outputAction.showSignUpPage()
+        outputAction.pressedSignUpPage()
     }
 
     //MARK: - Constraints SnapKit

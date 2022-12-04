@@ -7,5 +7,6 @@
 
 import Foundation
 
-protocol LoginViewInputProtocol: AnyObject {  //то что выходит из вью
+protocol LoginViewInputProtocol: AnyObject {  //то что приходит во вью Login
+    //здесь реализуется UI
 }

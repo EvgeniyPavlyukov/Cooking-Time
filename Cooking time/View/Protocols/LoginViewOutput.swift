@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LoginViewOutputProtocol: AnyObject {  //то что выходит из вью
-    func showSignUpPage()
+protocol LoginViewOutputProtocol: AnyObject {  //действия которые выходят из вью LoginVC
+    func pressedSignUpPage()
 }

@@ -8,8 +8,7 @@
 import Foundation
 
 class LoginPresenter: LoginViewOutputProtocol, InteractorOutputProtocol, ViewOutputProtocol {
-    
-   
+
     //уходит в интерактор
     weak var view: LoginViewInputProtocol! //слабая ссылка на вью
     var interactor: InteractorInputProtocol! //связующее звено между всеми остальными
@@ -38,7 +37,7 @@ class LoginPresenter: LoginViewOutputProtocol, InteractorOutputProtocol, ViewOut
     
     //MARK: - LoginViewOutputProtocol
     
-    func showSignUpPage() {
+    func pressedSignUpPage() {
         router.showSignUpPage()
     }
 }

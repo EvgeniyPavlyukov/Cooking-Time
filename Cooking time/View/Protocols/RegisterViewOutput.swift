@@ -7,5 +7,5 @@
 
 import Foundation
 
-protocol RegisterViewOutputProtocol: AnyObject {  //то что выходит из вью
+protocol RegisterViewOutputProtocol: AnyObject {  //действия выходящие из вью RegistrationVC кроме роутера
 }
