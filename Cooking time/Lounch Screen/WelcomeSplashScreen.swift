@@ -9,6 +9,10 @@ import UIKit
 
 class WelcomeSplashScreen: UIViewController {
     
+    deinit {
+        print("Splash screen is destroied")
+    }
+    
     private var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
@@ -16,7 +20,6 @@ class WelcomeSplashScreen: UIViewController {
         view.backgroundColor = UIColor.white
         createLabel()
         animationLabel()
-        changingView()
     }
     
     private func createLabel() {
@@ -43,17 +46,6 @@ class WelcomeSplashScreen: UIViewController {
             }
             charIndex += 1
         }
-    }
-    
-    //MARK: - Transition to logIn Screen
-    
-    private func changingView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute:  {
-            let homeViewController = LoginAssembler.loginModuleAssembling()
-            homeViewController.modalTransitionStyle = .crossDissolve
-            homeViewController.modalPresentationStyle = .fullScreen
-            self.present(homeViewController, animated: true)
-        })
     }
 
 }

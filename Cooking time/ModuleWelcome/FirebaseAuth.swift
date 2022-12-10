@@ -12,7 +12,7 @@ import Firebase
 
 class FirebaseAuthClass {
     
-    var router: LoginRouterInputProtocol!
+    weak var router: LoginRouterInputProtocol!
 
     func logInUser(login: String, password: String) {
         FirebaseAuth.Auth.auth().signIn(withEmail: login, password: password) {[weak self] /* If you have a closure inside a class that uses self, the closure will keep a strong reference to self as long as the closure lives in memory.*/ result, error in
@@ -22,6 +22,7 @@ class FirebaseAuthClass {
             
             guard error == nil else {
                 // show failed login
+                print(error?.localizedDescription)
                 print("No user was found")
                 return
             }

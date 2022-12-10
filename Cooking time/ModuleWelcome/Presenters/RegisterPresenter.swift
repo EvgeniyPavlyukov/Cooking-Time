@@ -19,20 +19,25 @@ class RegisterPresenter: RegisterViewOutputProtocol, InteractorOutputProtocol, V
     //MARK: - ViewOutputProtocol
     
     func obtain(login: String?, password: String?, passwordConfirmation: String?) {
-        interactor.didObtainForSignUp(login: login, password: password, confirmationPassword: passwordConfirmation)
+        guard let loginChecked = login, !loginChecked.isEmpty else {
+            print("Missing Email field data")
+            return
+        }
+        
+        guard let passwordChecked = password, !passwordChecked.isEmpty else {
+            print("Missing password field data")
+            return
+        }
+        
+        guard let confirmationPasswordChecked = passwordConfirmation, !confirmationPasswordChecked.isEmpty else {
+            print("Missing confirmation password field data")
+            return
+        }
+        
+        self.router.showSignUpAccountAlert(login: loginChecked, password: passwordChecked)
     }
     
     //MARK: - InteractorOutputProtocol
-    
-    func signUpWith(login: String, password: String) {
-        router.showSignUpAccountAlert(login: login, password: password)
-    }
-    
-    func logInWith(login: String, password: String) {
-        // no need
-    }
-    
-    func presentSignUpPage() {
-        // no need
-    }
+
+ 
 }

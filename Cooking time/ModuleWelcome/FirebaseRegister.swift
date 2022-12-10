@@ -16,7 +16,7 @@ import Firebase
 
 class FirebaseRegisterClass {
     
-    var router: RegisterRouterInputProtocol!
+    weak var router: RegisterRouterInputProtocol!
     
     func createNewUser(login: String, password: String) {
         FirebaseAuth.Auth.auth().createUser(withEmail: login, password: password) {[weak self] result, error in

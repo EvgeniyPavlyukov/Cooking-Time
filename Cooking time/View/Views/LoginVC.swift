@@ -32,6 +32,11 @@ class LoginVC: UIViewController, LoginViewInputProtocol {
        
         textFieldEmail.delegate = self
         textFieldPassword.delegate = self
+    
+    }
+    
+    deinit {
+        print("LoginVC is destroied")
     }
     
     fileprivate func initialization() {

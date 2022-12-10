@@ -10,15 +10,20 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = WelcomeSplashScreen()
         window?.makeKeyAndVisible()
-        
+        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(dismissSplashScreen), userInfo: nil, repeats: false)
+    }
+    
+    @objc func dismissSplashScreen() {
+        let mainVC = LoginAssembler.loginModuleAssembling()
+        window?.rootViewController = mainVC
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

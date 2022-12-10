@@ -28,6 +28,10 @@ class RegistrationVC: UIViewController, RegisterViewInputProtocol {
         createConstraints()
     }
     
+    deinit {
+        print("RegistrationVC is destroied")
+    }
+    
     fileprivate func initialization() {
         view.backgroundColor = UIColor(displayP3Red: 43/255, green: 199/255, blue: 254/255, alpha: 1)
         self.navigationItem.title = "Create new account"

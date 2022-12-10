@@ -14,8 +14,6 @@ class Router: LoginRouterInputProtocol, RegisterRouterInputProtocol, ViewInputPr
   
     weak var view: UIViewController!
     weak var interactor: Interactor!
-    var registerOutput: RegisterViewOutputProtocol!
-    var loginOutput: LoginRouterOutputProtocol!
     var firebaseSignUp: FirebaseRegisterClass!
     var firebaseSignIn: FirebaseAuthClass!
     
@@ -30,30 +28,35 @@ class Router: LoginRouterInputProtocol, RegisterRouterInputProtocol, ViewInputPr
                                       handler: {_ in
         }))
         
-        view?.present(alert, animated: true)
+        self.view?.present(alert, animated: true)
         
     }
     
     
     //MARK: - LoginRouterInputProtocol
     func showSignUpPage() {
-        weak var signUPVC = RegistrationAssembler.registrationModuleAssembling()
-        view?.present(signUPVC!, animated: true)
+        var signUPVC = RegistrationAssembler.registrationModuleAssembling()
+        self.view?.present(signUPVC, animated: true)
     }
     
     func checkForLogin(login: String, password: String) {
-        firebaseSignIn.logInUser(login: login, password: password)
+        self.firebaseSignIn.logInUser(login: login, password: password)
     }
     
     func showRecepiesPageAfterAuth() {
-//        let recepiesModuleAssembler =
-//        view.present(recepiesModuleAssembler, animated: true, completion: nil)
+        let recepiesModuleAssembler = RecipiesAssembler.createTabBar()
+        recepiesModuleAssembler.modalPresentationStyle = .fullScreen
+        recepiesModuleAssembler.modalTransitionStyle = .crossDissolve
+        self.view.present(recepiesModuleAssembler, animated: true) {
+            let loginVC = LoginAssembler.loginModuleAssembling()
+            loginVC.dismiss(animated: false)
+        }
     }
     
     
     //MARK: - RegisterRouterInputProtocol
     func popBackToLogin() {
-        view?.dismiss(animated: true)
+        self.view?.dismiss(animated: true)
     }
     
     func showFailureLoginAlert(login: String, password: String) {

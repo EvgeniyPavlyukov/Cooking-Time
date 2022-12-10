@@ -14,30 +14,31 @@ class LoginPresenter: LoginViewOutputProtocol, InteractorOutputProtocol, ViewOut
     var interactor: InteractorInputProtocol! //связующее звено между всеми остальными
     var router: LoginRouterInputProtocol!
     
-    //MARK: - InteractorOutputProtocol
-    
-    func presentSignUpPage() {
-        router.showSignUpPage()
-    }
-    
-    
-    func signUpWith(login: String, password: String) {
-        // no need
-    }
-    
-    func logInWith(login: String, password: String) {
-        router.checkForLogin(login: login, password: password)
-    }
-    
+  
     //MARK: - ViewOutputProtocol
     
     func obtain(login: String?, password: String?, passwordConfirmation: String?) {
-        interactor.didObtainForSignIn(login: login, password: password)
+        guard let loginChecked = login, !loginChecked.isEmpty else {
+            print("Missing Email field data")
+            return
+        }
+        
+        guard let passwordChecked = password, !passwordChecked.isEmpty else {
+            print("Missing password field data")
+            return
+        }
+        
+        self.router.checkForLogin(login: loginChecked, password: passwordChecked)
     }
     
     //MARK: - LoginViewOutputProtocol
     
     func pressedSignUpPage() {
-        router.showSignUpPage()
+        self.router.showSignUpPage()
     }
+    
+    func logInWith(login: String, password: String) {
+        self.router.checkForLogin(login: login, password: password)
+    }
+    
 }

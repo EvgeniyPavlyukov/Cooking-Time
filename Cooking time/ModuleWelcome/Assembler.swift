@@ -23,15 +23,19 @@ class LoginAssembler {
         
         view.outputData = presenter
         view.outputAction = presenter
+        
         presenter.view = view 
         presenter.interactor = interactor
         presenter.router = router
+        
         router.interactor = interactor
         router.firebaseSignUp = firebaseRegister
         router.firebaseSignIn = firebaseAuth
         router.view = view
+        
         interactor.output = presenter
         
+        firebaseAuth.router = router
         
         return view
     }
