@@ -10,22 +10,25 @@ import SnapKit
 
 class RecipiesVC: UIViewController {
     
-   
     var imageView: UIImageView!
     var label: UILabel!
+    var viewCollection: UIView! {
+        didSet {
+            viewCollection.frame = view.bounds
+        }
+    }
     
     weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
         
         view.backgroundColor = UIColor.white
         self.title = "All Recipies"
-        segmentedControl()
+//        segmentedControl()
         navigationSearch()
         createLeftBarButtonItem()
+        view.addSubview(viewCollection)
     }
     
     //MARK: - Segmented Controll Vegetian

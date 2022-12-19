@@ -19,7 +19,7 @@
 		3B403C242944D1BA000E5D06 /* FavoritePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C232944D1BA000E5D06 /* FavoritePresentor.swift */; };
 		3B403C262944D1C8000E5D06 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C252944D1C8000E5D06 /* FavoriteRouter.swift */; };
 		3B403C282944D24D000E5D06 /* RecipiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C272944D24D000E5D06 /* RecipiesInteractor.swift */; };
-		3B403C2A2944D25C000E5D06 /* RevipiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C292944D25C000E5D06 /* RevipiesPresenter.swift */; };
+		3B403C2A2944D25C000E5D06 /* RecipiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C292944D25C000E5D06 /* RecipiesPresenter.swift */; };
 		3B403C2C2944D269000E5D06 /* RecipiesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B403C2B2944D269000E5D06 /* RecipiesRouter.swift */; };
 		3B752763290B1C0800925E1B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3B752762290B1C0800925E1B /* .gitignore */; };
 		3B8E3A092939112A002269E0 /* FirebaseRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E3A082939112A002269E0 /* FirebaseRegister.swift */; };
@@ -52,6 +52,10 @@
 		3BCF9F27293CEAEA004AE918 /* RecepiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF9F26293CEAEA004AE918 /* RecepiesVC.swift */; };
 		3BCF9F29293CEB15004AE918 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF9F28293CEB15004AE918 /* FavoritesVC.swift */; };
 		3BDEB591291160A80003C9F4 /* RecipiesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDEB590291160A80003C9F4 /* RecipiesManager.swift */; };
+		3BF4B41D2949FA5A003B9BC1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4B41C2949FA5A003B9BC1 /* NetworkService.swift */; };
+		3BF4B420294A061A003B9BC1 /* RecepiesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4B41F294A061A003B9BC1 /* RecepiesModels.swift */; };
+		3BF4B423294CAAF0003B9BC1 /* RecepiesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4B422294CAAEF003B9BC1 /* RecepiesCollectionView.swift */; };
+		3BF4B42629509130003B9BC1 /* FavoritesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4B42529509130003B9BC1 /* FavoritesTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +71,7 @@
 		3B403C232944D1BA000E5D06 /* FavoritePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresentor.swift; sourceTree = "<group>"; };
 		3B403C252944D1C8000E5D06 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		3B403C272944D24D000E5D06 /* RecipiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesInteractor.swift; sourceTree = "<group>"; };
-		3B403C292944D25C000E5D06 /* RevipiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevipiesPresenter.swift; sourceTree = "<group>"; };
+		3B403C292944D25C000E5D06 /* RecipiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesPresenter.swift; sourceTree = "<group>"; };
 		3B403C2B2944D269000E5D06 /* RecipiesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesRouter.swift; sourceTree = "<group>"; };
 		3B752762290B1C0800925E1B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3B8E3A082939112A002269E0 /* FirebaseRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRegister.swift; sourceTree = "<group>"; };
@@ -102,6 +106,10 @@
 		3BCF9F26293CEAEA004AE918 /* RecepiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesVC.swift; sourceTree = "<group>"; };
 		3BCF9F28293CEB15004AE918 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		3BDEB590291160A80003C9F4 /* RecipiesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesManager.swift; sourceTree = "<group>"; };
+		3BF4B41C2949FA5A003B9BC1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3BF4B41F294A061A003B9BC1 /* RecepiesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesModels.swift; sourceTree = "<group>"; };
+		3BF4B422294CAAEF003B9BC1 /* RecepiesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesCollectionView.swift; sourceTree = "<group>"; };
+		3BF4B42529509130003B9BC1 /* FavoritesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableView.swift; sourceTree = "<group>"; };
 		EDA0D0A7C5955478CA2D5215 /* Pods_Cooking_time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cooking_time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9081773D94C41A897B78E4 /* Pods-Cooking time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking time.debug.xcconfig"; path = "Target Support Files/Pods-Cooking time/Pods-Cooking time.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,8 +148,9 @@
 			children = (
 				3BCF9F26293CEAEA004AE918 /* RecepiesVC.swift */,
 				3B403C272944D24D000E5D06 /* RecipiesInteractor.swift */,
-				3B403C292944D25C000E5D06 /* RevipiesPresenter.swift */,
+				3B403C292944D25C000E5D06 /* RecipiesPresenter.swift */,
 				3B403C2B2944D269000E5D06 /* RecipiesRouter.swift */,
+				3BF4B421294CAAAA003B9BC1 /* CustomView */,
 			);
 			path = Recepies;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 				3B403C212944D1A6000E5D06 /* FavoriteInteractor.swift */,
 				3B403C232944D1BA000E5D06 /* FavoritePresentor.swift */,
 				3B403C252944D1C8000E5D06 /* FavoriteRouter.swift */,
+				3BF4B42429509110003B9BC1 /* CustomView */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -343,11 +353,37 @@
 			isa = PBXGroup;
 			children = (
 				3BCF9F24293CE717004AE918 /* RecipiesAssembler.swift */,
-				3B403C1A2944CDA6000E5D06 /* Search */,
+				3BF4B41C2949FA5A003B9BC1 /* NetworkService.swift */,
+				3BF4B41E294A05FD003B9BC1 /* Models */,
 				3B403C192944CD81000E5D06 /* Favorite */,
 				3B403C182944CD2F000E5D06 /* Recepies */,
+				3B403C1A2944CDA6000E5D06 /* Search */,
 			);
 			path = ModuleRecepies;
+			sourceTree = "<group>";
+		};
+		3BF4B41E294A05FD003B9BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BF4B41F294A061A003B9BC1 /* RecepiesModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BF4B421294CAAAA003B9BC1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3BF4B422294CAAEF003B9BC1 /* RecepiesCollectionView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3BF4B42429509110003B9BC1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3BF4B42529509130003B9BC1 /* FavoritesTableView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BCF9F25293CE717004AE918 /* RecipiesAssembler.swift in Sources */,
+				3BF4B423294CAAF0003B9BC1 /* RecepiesCollectionView.swift in Sources */,
 				3B8E3A2529392848002269E0 /* ViewInputs.swift in Sources */,
 				3B8E3A2929392B3E002269E0 /* LoginViewInput.swift in Sources */,
 				3B8E3A0E293912A8002269E0 /* Router.swift in Sources */,
@@ -479,7 +516,9 @@
 				3B8E3A21293927BD002269E0 /* LoginRouterInput.swift in Sources */,
 				3B403C222944D1A6000E5D06 /* FavoriteInteractor.swift in Sources */,
 				3BC4D59A2934C4A2009494FA /* InteractorInput.swift in Sources */,
+				3BF4B41D2949FA5A003B9BC1 /* NetworkService.swift in Sources */,
 				3B188DEC29057328004297A6 /* WelcomeSplashScreen.swift in Sources */,
+				3BF4B42629509130003B9BC1 /* FavoritesTableView.swift in Sources */,
 				3BC4D5AF293666D4009494FA /* RegisterPresenter.swift in Sources */,
 				3B8E3A27293929B4002269E0 /* RegisterViewInput.swift in Sources */,
 				3BDEB591291160A80003C9F4 /* RecipiesManager.swift in Sources */,
@@ -492,6 +531,7 @@
 				3BCF9F29293CEB15004AE918 /* FavoritesVC.swift in Sources */,
 				3B188DF02905A0BF004297A6 /* LoginVC.swift in Sources */,
 				3B8E3A092939112A002269E0 /* FirebaseRegister.swift in Sources */,
+				3BF4B420294A061A003B9BC1 /* RecepiesModels.swift in Sources */,
 				3B188DEE29059FE6004297A6 /* RegistrationVC.swift in Sources */,
 				3BC4D5A82934CAF3009494FA /* LoginViewOutput.swift in Sources */,
 				3B8E3A10293913C2002269E0 /* Assembler.swift in Sources */,
@@ -501,7 +541,7 @@
 				3BC4D5A02934C4EB009494FA /* RegisterRouterInput.swift in Sources */,
 				3B403C282944D24D000E5D06 /* RecipiesInteractor.swift in Sources */,
 				3B8E3A1F293925FA002269E0 /* RegisterRouterOutput.swift in Sources */,
-				3B403C2A2944D25C000E5D06 /* RevipiesPresenter.swift in Sources */,
+				3B403C2A2944D25C000E5D06 /* RecipiesPresenter.swift in Sources */,
 				3B403C1C2944CEA5000E5D06 /* SearchInteractor.swift in Sources */,
 				3BA20F5928FB43B3004C76CA /* AppDelegate.swift in Sources */,
 				3B403C262944D1C8000E5D06 /* FavoriteRouter.swift in Sources */,

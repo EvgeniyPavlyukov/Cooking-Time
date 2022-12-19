@@ -12,7 +12,6 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         title = "Find your dish"
         self.view.backgroundColor = UIColor.white
         createSearchTextField()

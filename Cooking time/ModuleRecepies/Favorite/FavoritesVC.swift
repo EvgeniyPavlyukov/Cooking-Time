@@ -15,7 +15,7 @@ class FavoritesVC: UIViewController {
         view.backgroundColor = UIColor.white
         
         navigationItem.title = "Best recipies"
-        segmentedControl()
+//        segmentedControl()
         navigationSearch()
         createLeftBarButtonItem()
         

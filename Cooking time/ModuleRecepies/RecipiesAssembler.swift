@@ -10,6 +10,7 @@ import UIKit
 class RecipiesAssembler {
 
     class func createTabBar() -> UITabBarController {
+        
         let tabBarVC = UITabBarController()
         let allRecipies = createNavVC(vc: RecipiesVC(), imageName: "list.bullet.rectangle.portrait.fill", itemName: "All recipies")
         let favoriteRecipies = createNavVC(vc: FavoritesVC(), imageName: "star.fill", itemName: "Favorite")
@@ -28,4 +29,5 @@ class RecipiesAssembler {
         
         return tabBarVC
     }
+    
 }
